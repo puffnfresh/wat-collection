@@ -16,6 +16,11 @@ wat1 = 2 + 2
 wat2 = (a, b, c)
     where (a, b, c) = (b + 5, 3, a ^ 7)
 
+-- more laziness
+-- print $ head wat3 works, print $ head wat4 will not
+wat4 = foldr (:) [] [1..]
+wat5 = foldl (flip (:)) [] [1..]
+
 main :: IO ()
 main = do
   print wat1 -- 5
