@@ -14,3 +14,23 @@
 
 (conj '(1 2 3) 4)
 ;; => (4 1 2 3) 
+
+
+;; contains?
+
+(contains? [1 2 3] 1)
+;; => true
+
+(contains? [1 2 3] 2)
+;; => true
+
+(contains? [1 2 3] 3)
+;; => false
+
+(contains? [1 2 3] 0)
+;; => true
+
+;; The contains? function returns true if the key or index is containable
+;;  within a collection, not the value itself. This bites many a Clojure
+;;  neophyte.
+
