@@ -16,6 +16,9 @@ wat1 = 2 + 2
 wat2 = (a, b, c)
     where (a, b, c) = (b + 5, 3, a ^ 7)
 
+-- No arbitrary restriction on a number of let bindings
+wat42 = let in 42
+
 main :: IO ()
 main = do
   print wat1 -- 5
