@@ -10,7 +10,9 @@
 */
 
 {} + []; // 0
+({} + []); // "[object Object]"
 {} + {}; // NaN
+({} + {}); // "[object Object][object Object]"
 [0, -1, -2].sort(); // [-1, -2, 0]
 ',,,' == new Array(4) // true
 ["1", "2", "3", "4", "5", "6", "7", "8", "9"].map(parseInt) // [ 1, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ]
