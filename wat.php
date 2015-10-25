@@ -89,3 +89,18 @@ array(7) {
   bugs.
 */
 
+
+if("1 dog" + "2 cats" == "3 mammals" == True) {
+  echo "PHP is the best language ever";
+} else {
+  echo "I knew...";
+}
+
+/*
+Produces:
+PHP is the best language ever
+*/
+/*
+  Explanation:
+  too lazy to explain it. :v sorry. (after all, i'm a PHP Developer)
+*/
