@@ -19,8 +19,15 @@ wat2 = (a, b, c)
 -- No arbitrary restriction on a number of let bindings
 wat42 = let in 42
 
+-- The compiler is perfectly content with this function
+-- even though there's no such thing as a fractional integer
+-- So we've created an expression that can't be evaluated
+wat4 :: (Fractional b, Integral b) => b -> b
+wat4 n = n/2^n
+
 main :: IO ()
 main = do
   print wat1 -- 5
   print wat2 -- (8,3,2097152)
   print $ wat3 (1, True) -- "(1,True)"
+  print wat42 -- 42
