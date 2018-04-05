@@ -19,8 +19,11 @@ wat2 = (a, b, c)
 -- No arbitrary restriction on a number of let bindings
 wat42 = let in 42
 
+wat4 = maximum (1,0)
+
 main :: IO ()
 main = do
   print wat1 -- 5
   print wat2 -- (8,3,2097152)
   print $ wat3 (1, True) -- "(1,True)"
+  print wat4 -- 0
